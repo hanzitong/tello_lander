@@ -1,0 +1,17 @@
+<?xml version=1.0"?>
+<launch>
+  <!-- Launch nodes required for joystick operation -->
+  <node
+    pkg="joy"
+    exec="joy_node"
+    output="screen" />
+  <node
+    pkg="tello_driver"
+    exec="tello_joy_main"
+    output="screen" />
+  <node
+    pkg="tello_driver"
+    exec="tello_driver_main"
+    output="screen" />
+</launch>
+
