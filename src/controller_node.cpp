@@ -7,17 +7,9 @@
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 
-#include "PID_controller.hpp"
+#include "controller.hpp"
 
 using namespace std::chrono_literals;
-
-
-
-double pid_calc_cmdvel(const double current_pos, const double goal_pos, const double dt, const double kp, const double kd, const double ki) {
-    double err = goal_pos - current_pos; 
-    return err * kp + err * kd + err * ki;
-}
-
 
 class ControlInputPublisher : public rclcpp::Node
 {

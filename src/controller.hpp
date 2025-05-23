@@ -17,10 +17,10 @@ private:
     double integral_, prev_error_;
 };
 
-/// @param current_pos   現在値
-/// @param goal_pos      目標値
-/// @param dt            前回呼び出しからの経過時間 [秒]
-/// @return              制御入力
+/// @param current_pos   current position
+/// @param goal_pos      goal position
+/// @param dt            time between the last time this program called
+/// @return              control input
 double PIDController::compute(double current_pos, double goal_pos, double dt)
 {
     if (dt <= 0.0) return 0.0;
